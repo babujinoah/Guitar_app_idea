@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
+    <title>Noah's Guitar app!</title>
+</head>
+
+<body>
+    <main>
+        <section id="onPageTitle">
+            <h1>Welcome to Noah's Guitar App</h1>
+
+
+        </section>
+        <section id="introText">
+            <h2>Chord Maker</h2>
+            
+        </section>
+        <section class="chordStuff">
+        <label for="selectANote"></label>
+        <!-- the input type has attributes i.e. name, id, max length. Lists is an attribute that looks for a datalist to populate a dropdown menu with -->
+        <input type="text" name="NoteSelection" id="pickANote" maxlength="5" size="10" list="notes">     
+        
+        <!-- datalist option and value are html features? so they need to be called datalist/option/value to work -->
+            <datalist id="notes">
+            <option value="A"></option>
+            <option value="A#/Bb"></option>
+            <option value="B"></option>
+            <option value="C"></option>
+            <option value="C#/Db"></option>
+            <option value="D"></option>
+            <option value="D#/Eb"></option>
+            <option value="E"></option>
+            <option value="F"></option>
+            <option value="F#/Gb"></option>
+            <option value="G"></option>
+            <option value="G#/Ab"></option>
+            </datalist>
+
+            <!-- buttons --> 
+        <br> <!-- Starts a new line -->
+        <button id="majorBtn">Major Chord</button>      <!-- The button for a major chord -->
+        <button id="minorBtn">Minor Chord</button>      <!-- The button for a minor chord -->
+        <button id="diminishedBtn">Diminished Chord</button> <!-- The button for a diminished chord -->
+        <button id="augmentedBtn">Augmented Chord</button> <!-- The button for an augmented chord -->
+            <!-- text area -->
+            <p id="chordPara">Notes of the chord will appear here! <br> Enharmonic equivalents were used so that's why some rows will show two notes with a slash. </p>     <!-- The paragraph that displays the notes -->
+            
+
+            <!-- Boxes for the notes instead of/or in addition to paragraph -->
+                <div id="boxesForChords">
+                    <div class="groupBoxAndLabel">          <!-- Is a container to group the box and label as one item in the flex box -->
+                    <div class="boxForNotes" id="rootNoteBox"></div>    <!-- All boxes have the class "boxForNotes but individual id's" -->
+                    <h4 class="noteBoxLabel"> Root </h4>       <!-- Headings under the box to label each box -->
+                </div> 
+
+
+                <div class="groupBoxAndLabel">
+                <div class="boxForNotes" id="thirdBox"></div>
+                <h4 class="noteBoxLabel"> Third </h4>
+                </div> 
+
+                <div class="groupBoxAndLabel">
+                <div class="boxForNotes" id="fifthBox"></div>
+                <h4 class="noteBoxLabel"> Fifth </h4>
+                </div> 
+            </div>
+
+
+        </section>
+
+    </main>
+    
+
+
+</body>
+</html>
